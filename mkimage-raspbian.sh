@@ -108,6 +108,10 @@ fi
 rm -rf "$rootfsDir/dev" "$rootfsDir/proc"
 mkdir -p "$rootfsDir/dev" "$rootfsDir/proc"
 
+# Create /dev/null and /dev/random
+mknod -m 666 "$rootfsDir/dev/null" c 1 3
+mknod -m 666 "$rootfsDir/dev/random" c 1 8
+
 # make sure /etc/resolv.conf has something useful in it
 mkdir -p "$rootfsDir/etc"
 cat > "$rootfsDir/etc/resolv.conf" <<'EOF'
