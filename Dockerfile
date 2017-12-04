@@ -1,5 +1,5 @@
 #sdhibit/rpi-raspbian
 FROM scratch
-MAINTAINER Steve Hibit <sdhibit@gmail.com>
+MAINTAINER Alexander Sparkowsky <info@roamingthings.de>
 
-ADD raspbian.2015.05.05.tar.xz /
+ADD raspbian.2017.11.29.tar.xz /
