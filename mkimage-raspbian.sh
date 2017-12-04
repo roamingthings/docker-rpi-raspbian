@@ -111,6 +111,7 @@ mkdir -p "$rootfsDir/dev" "$rootfsDir/proc"
 # Create /dev/null and /dev/random
 mknod -m 666 "$rootfsDir/dev/null" c 1 3
 mknod -m 666 "$rootfsDir/dev/random" c 1 8
+mknod -m 666 "$rootfsDir/dev/urandom" c 1 9
 
 # make sure /etc/resolv.conf has something useful in it
 mkdir -p "$rootfsDir/etc"
